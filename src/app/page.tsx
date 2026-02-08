@@ -19,27 +19,28 @@ export default function Home() {
     {
       name: "accessPortal",
       description: "Route the user to the correct healthcare portal based on their role or intent.",
-      tool: async (input: { role: 'doctor' | 'patient' | 'lab' | 'pharmacy' }) => {
+      tool: async (input: { role: 'doctor' | 'patient' | 'lab' | 'pharmacy' | 'ehr' }) => {
+        const target = input.role === 'ehr' ? 'doctor' : input.role;
         setIsRedirecting(true);
-        setTargetPortal(input.role === 'doctor' ? "Doctor (EHR)" : input.role);
+        setTargetPortal(target === 'doctor' ? "Doctor (EHR)" : target);
 
         // Simulate a brief delay for effect before continuous routing
         setTimeout(() => {
-          if (input.role === 'doctor') router.push('/demos/ehr');
-          else if (input.role === 'patient') router.push('/demos/patient');
-          else if (input.role === 'lab') router.push('/demos/lab');
-          else if (input.role === 'pharmacy') router.push('/demos/pharmacy');
+          if (target === 'doctor') router.push('/demos/ehr');
+          else if (target === 'patient') router.push('/demos/patient');
+          else if (target === 'lab') router.push('/demos/lab');
+          else if (target === 'pharmacy') router.push('/demos/pharmacy');
         }, 1500);
 
         return {
           action: "redirect",
-          target: input.role,
-          message: `Redirecting you to the ${input.role === 'doctor' ? 'Electronic Health Records' : input.role} portal...`
+          target: target,
+          message: `Redirecting you to the ${target === 'doctor' ? 'Electronic Health Records' : target} portal...`
         };
       },
       inputSchema: z.object({
-        role: z.enum(['doctor', 'patient', 'lab', 'pharmacy'])
-          .describe("The target portal. Rules:\n- 'doctor': for EHR, providers, analysis.\n- 'patient': for SYMPTOMS, pain, appointments, or personal health questions.\n- 'lab': for test results.\n- 'pharmacy': for medications.")
+        role: z.enum(['doctor', 'patient', 'lab', 'pharmacy', 'ehr'])
+          .describe("The target portal. Rules:\n- 'doctor' (or 'ehr'): for EHR, providers, analysis.\n- 'patient': for SYMPTOMS, pain, appointments.\n- 'lab': for test results.\n- 'pharmacy': for medications.")
       }),
       outputSchema: z.any()
     }

@@ -51,7 +51,7 @@ export function LandingChat() {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="w-full h-full flex flex-col bg-slate-950/50 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden shadow-2xl relative"
+                className="w-full max-w-4xl h-[80vh] flex flex-col bg-slate-950/50 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden shadow-2xl relative"
             >
                 {/* Top Bar / Header */}
                 <div className="absolute top-0 left-0 right-0 h-16 bg-slate-900/50 backdrop-blur-md border-b border-white/10 flex items-center px-6 z-20">
