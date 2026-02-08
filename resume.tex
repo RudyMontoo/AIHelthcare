@@ -1,0 +1,90 @@
+
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Color definitions
+\definecolor{primary}{RGB}{33, 33, 33} % Dark Grey
+\definecolor{highlight}{RGB}{0, 85, 165} % Professional Blue
+
+\hypersetup{
+    pdftitle={Rudra Sharma - Machine Learning & Generative AI Engineer},
+    pdfauthor={Rudra Sharma},
+    pdfkeywords={Machine Learning, NLP, Generative AI, LLMs, RAG, Python, FastAPI},
+    pdfstartview=FitH,
+    colorlinks=true,
+    urlcolor=highlight,
+    linkcolor=highlight
+}
+
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\vspace{2pt}\hrule\vspace{4pt}]
+\titleformat{\subsection}{\bfseries\color{primary}}{}{0em}{}
+\newcommand{\contact}[1]{\small#1}
+
+\begin{document}
+
+\begin{center}
+{\Large\textbf{Rudra Sharma}}\\[4pt]
+\contact{
+    \href{mailto:rudraeng27@gmail.com}{rudraeng27@gmail.com} $|$
+    +91-7355039475 \\
+    \href{https://linkedin.com/in/rudra-sharma-78628232b}{linkedin.com/in/rudra-sharma-78628232b} $|$
+    \href{https://github.com/RudyMontoo}{github.com/RudyMontoo}
+}
+\end{center}
+
+\vspace{-4pt}
+
+% Projects Section (Skills Integrated)
+\section*{PROJECTS}
+
+\subsection*{Team Projects}
+
+\textbf{Nexus Health Gateway} (Lead Developer) \hfill \href{http://localhost:3000}{Live Demo} $|$ \href{https://github.com/RudyMontoo/TheUIStrikesBack}{GitHub}
+\begin{itemize}[leftmargin=0.3cm, itemsep=1pt]
+\item \textit{Team Members:} [Name 1], [Name 2] % TODO: Add team members
+\item Architected a **comprehensive AI-enhanced EHR ecosystem** using **Next.js 15**, **TypeScript**, and **Tailwind CSS**, bridging complex medical data and patient understanding.
+\item Engineered interactive **AI agents** ("Tambo" SDK) for symptom explanation and medical guidance, utilizing **LLMs** and **Context Orchestration** to route users based on intent.
+\item Implemented **real-time data visualization** with **Recharts** for smart lab trends and designed a unified UI system with reusable **React components**.
+\end{itemize}
+
+\textbf{SignEase} (Contributor) \hfill \href{https://github.com/FaiquaNaeem/SignEase}{GitHub}
+\begin{itemize}[leftmargin=0.3cm, itemsep=1pt]
+\item \textit{Team Members:} [Name 1], [Name 2] % TODO: Add team members
+\item Contributed to the development of a sign language translation tool using **Machine Learning** and **Computer Vision** techniques.
+\item Implemented real-time gesture recognition using **TensorFlow/PyTorch** and **OpenCV**, enabling seamless communication for hearing-impaired users.
+\item Optimized model inference for low-latency performance on edge devices, ensuring accessibility and responsiveness.
+\end{itemize}
+
+\subsection*{Solo Projects}
+
+\textbf{E-Commerce LLM Chatbot} \hfill \href{https://github.com/RudyMontoo/ECommerce_Chatbot}{GitHub}
+\begin{itemize}[leftmargin=0.3cm, itemsep=1pt]
+\item Architected an **LLM-powered RAG system** supporting **semantic search** and FAQ retrieval over 1K+ records using **Python** and **LangChain**.
+\item Implemented embedding-based retrieval using **ChromaDB** (Vector Database), improving response relevance by **35\%** compared to keyword search.
+\item Engineered a **text-to-SQL NLP pipeline** to translate natural language into executable **SQL queries**, deployed via **Streamlit**.
+\end{itemize}
+
+\textbf{Healthcare Premium Prediction} \hfill \href{https://github.com/RudyMontoo/Health-Care-Premium-Prediction}{GitHub}
+\begin{itemize}[leftmargin=0.3cm, itemsep=1pt]
+\item Designed an end-to-end **Machine Learning pipeline** incorporating **feature engineering**, SMOTE, and **hyperparameter tuning** with **Scikit-Learn**.
+\item Evaluated classification models based on ROC-AUC and F1-score, optimizing **FastAPI** inference endpoints for **sub-200ms latency**.
+\item Delivered an interactive **Streamlit** application for real-time risk scoring and input validation.
+\end{itemize}
+
+% Education
+\section*{EDUCATION}
+\textbf{Bachelor of Technology in Computer Science} \hfill \textbf{2024-2028}\\
+Krishna Institute of Engineering and Technology (KIET) \hfill CGPA: 8.56/10\\
+Ghaziabad, India
+
+\end{document}
